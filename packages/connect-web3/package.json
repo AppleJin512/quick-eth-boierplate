@@ -1,0 +1,16 @@
+{
+  "name": "connect-web3",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.ts",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "prettier --check --ignore-path=../../.prettierignore . && eslint .",
+    "format": "prettier --write --ignore-path=../../.prettierignore ."
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*"
+  }
+}
