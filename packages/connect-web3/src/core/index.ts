@@ -1,22 +1,12 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-
 import {
+  getThemeColors,
   ICoreOptions,
   IProviderUserOptions,
-  ThemeColors,
-  getThemeColors,
-  SimpleFunction
+  SimpleFunction,
+  ThemeColors
 } from '../helpers';
-import {
-  WEB3_CONNECT_MODAL_ID,
-  CONNECT_EVENT,
-  ERROR_EVENT,
-  CLOSE_EVENT,
-  SELECT_EVENT
-} from '../constants';
+import { CLOSE_EVENT, CONNECT_EVENT, ERROR_EVENT, SELECT_EVENT } from '../constants';
 import { themesList } from '../themes';
-import { Modal } from '../components';
 import { EventController, ProviderController } from '../controllers';
 
 const INITIAL_STATE = { show: false };
@@ -141,20 +131,20 @@ export class Core {
   // --------------- PRIVATE METHODS --------------- //
 
   private renderModal() {
-    const el = document.createElement('div');
-    el.id = WEB3_CONNECT_MODAL_ID;
-    document.body.appendChild(el);
-
-    ReactDOM.render(
-      <Modal
-        themeColors={this.themeColors}
-        userOptions={this.userOptions}
-        onClose={this.onClose}
-        resetState={this.resetState}
-        lightboxOpacity={this.lightboxOpacity}
-      />,
-      document.getElementById(WEB3_CONNECT_MODAL_ID)
-    );
+    // const el = document.createElement('div');
+    // el.id = WEB3_CONNECT_MODAL_ID;
+    // document.body.appendChild(el);
+    //
+    // ReactDOM.render(
+    //   <Modal
+    //     themeColors={this.themeColors}
+    //     userOptions={this.userOptions}
+    //     onClose={this.onClose}
+    //     resetState={this.resetState}
+    //     lightboxOpacity={this.lightboxOpacity}
+    //   />,
+    //   document.getElementById(WEB3_CONNECT_MODAL_ID)
+    // );
   }
 
   private _toggleModal = async () => {
