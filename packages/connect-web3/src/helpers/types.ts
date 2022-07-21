@@ -1,7 +1,4 @@
-export interface ICoreOptions extends IProviderControllerOptions {
-  lightboxOpacity: number;
-  theme: string | ThemeColors;
-}
+export type ICoreOptions = IProviderControllerOptions
 
 export interface IProviderControllerOptions {
   disableInjectedProvider: boolean;
@@ -79,25 +76,4 @@ export type ChainDataList = {
   [chainId: number]: ChainData;
 };
 
-export type ThemeColors = {
-  background: string;
-  main: string;
-  secondary: string;
-  border: string;
-  hover: string;
-};
-
-export interface IThemeConfig {
-  name: string;
-  colors: ThemeColors;
-}
-
-export type ThemesList = {
-  [name: string]: IThemeConfig;
-};
-
 export type Connector = (provider?: any, opts?: any) => Promise<any>;
-
-export interface IConnectorsMap {
-  [id: string]: Connector;
-}
