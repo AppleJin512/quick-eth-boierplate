@@ -13,15 +13,15 @@ import {
   IProviderDisplayWithConnector,
   getLocal,
   setLocal,
-  removeLocal,
   getProviderInfoById,
   getProviderDescription,
   IProviderInfo,
   filterMatches,
   IProviderUserOptions,
   getInjectedProvider,
-  findMatchingRequiredOptions
-} from '../helpers';
+  findMatchingRequiredOptions,
+  removeLocalCachedProvider
+} from "../helpers";
 import { EventController } from './events';
 
 export class ProviderController {
@@ -173,7 +173,7 @@ export class ProviderController {
 
   public clearCachedProvider() {
     this.cachedProvider = '';
-    removeLocal(CACHED_PROVIDER_KEY);
+    removeLocalCachedProvider()
   }
 
   public setCachedProvider(id: string) {

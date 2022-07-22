@@ -1,4 +1,5 @@
 import { isLocalStorageAvailable } from './utils';
+import { CACHED_PROVIDER_KEY } from "../constants";
 
 export let local: Storage;
 
@@ -28,6 +29,11 @@ export const getLocal = (key: string) => {
   }
   return data;
 };
+
+export const removeLocalCachedProvider = () => {
+  removeLocal(CACHED_PROVIDER_KEY);
+  removeLocal("walletconnect")
+}
 
 export const removeLocal = (key: string) => {
   if (local) {

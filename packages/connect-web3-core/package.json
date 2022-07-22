@@ -1,5 +1,5 @@
 {
-  "name": "connect-web3",
+  "name": "connect-web3-core",
   "version": "0.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -25,5 +25,7 @@
   "dependencies": {
     "detect-browser": "^5.3.0"
   },
-  "files": ["dist"]
+  "files": [
+    "dist"
+  ]
 }
