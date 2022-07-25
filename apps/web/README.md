@@ -1,38 +1,41 @@
-# create-svelte
+### Want full control over everything in this template?
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+We've created a new project called [**stackmix**](https://github.com/roxiness/stackmix). It's an experimental CLI that let's you pick and mix all features in a Routify template! Get started with `npx stackmix`
 
-## Creating a project
+# Routify Starter
 
-If you're seeing this, you've probably already done this step. Congrats!
+Starter template for [Routify](https://github.com/roxiness/routify).
 
-```bash
-# create a new project in the current directory
-npm init svelte
+# Get started
 
-# create a new project in my-app
-npm init svelte my-app
+To get started run:
+
+```sh
+mkdir routify-app
+cd routify-app
+npx @roxi/routify init
 ```
 
-## Developing
+# Scripts
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Run with `npm run <command>`, for example `npm run dev`
 
-```bash
-npm run dev
+| Command   | Description                                   |
+| --------- | --------------------------------------------- |
+| `dev`     | Development (port 5000)                       |
+| `build`   | Build your app for production!                |
+| `preview` | Preview the built version of your app locally |
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+# Want a service worker?
 
-## Building
+Checkout [vite-plugin-pwa](http://npmjs.org/vite-plugin-pwa)
 
-To create a production version of your app:
+# Extra Configs
 
-```bash
-npm run build
-```
+We include a few extra configs to help make it easy to ship a Routify project:
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+| Config Path        | Description                                                                                                                                                |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `netlify.toml`     | This is the [Netlify](https://www.netlify.com/) config, you need this when publishing to Netlify                                                           |
+| `vercel.json`      | This is the [Vercel](https://vercel.com/) config, you need this when publishing to Vercel                                                                  |
+| `public/.htaccess` | If you build your site to static using [spank](https://www.npmjs.com/package/spank) you will need this when putting your site on an apache based webserver |
