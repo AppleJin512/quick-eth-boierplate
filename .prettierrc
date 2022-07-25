@@ -2,5 +2,6 @@
   "singleQuote": true,
   "trailingComma": "none",
   "printWidth": 100,
-  "svelteStrictMode": false
+  "svelteStrictMode": false,
+  "htmlWhitespaceSensitivity": "ignore"
 }

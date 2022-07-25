@@ -1,7 +1,7 @@
 <script lang="ts">
   import { ConnectWeb3Modal } from 'connect-web3-svelte';
   import ConnectWalletModalContent from './ConnectWalletModalContent.svelte';
-  import { providerOptions } from "../constant/providerOptions.js";
+  import { providerOptions } from '../constant/providerOptions.js';
 
   let network = 'rinkeby';
 
@@ -23,7 +23,8 @@
     on:connect={handleOnConnect}
     on:error={handleConnectError}
     let:hide
-    let:userOptions>
+    let:userOptions
+  >
     <ConnectWalletModalContent on:close={hide} {userOptions} />
   </ConnectWeb3Modal>
 </div>
