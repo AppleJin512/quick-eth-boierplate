@@ -13,7 +13,6 @@
     "format": "prettier --write --ignore-path=../../.prettierignore ."
   },
   "dependencies": {
-    "ui": "*",
     "connect-web3-svelte": "*"
   },
   "devDependencies": {
