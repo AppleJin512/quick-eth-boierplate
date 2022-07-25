@@ -9,7 +9,8 @@
 <script lang="ts">
   import { createEventDispatcher, onMount } from "svelte";
   import Modal from "./Modal.svelte";
-  import { ProviderController, CONNECT_EVENT, ERROR_EVENT, IProviderUserOptions, IProviderOptions } from "connect-web3-core";
+  import { ProviderController, CONNECT_EVENT, ERROR_EVENT } from "connect-web3-core";
+  import type { IProviderUserOptions, IProviderOptions } from "connect-web3-core";
 
   export let cacheProvider = false; // optional
   export let network = ''; // optional

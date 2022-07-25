@@ -8,9 +8,6 @@ import {
 } from '../constants';
 import {
   isMobile,
-  IProviderControllerOptions,
-  IProviderOptions,
-  IProviderDisplayWithConnector,
   getLocal,
   setLocal,
   getProviderInfoById,
@@ -22,6 +19,11 @@ import {
   findMatchingRequiredOptions,
   removeLocalCachedProvider
 } from "../helpers";
+import type {
+  IProviderControllerOptions,
+  IProviderOptions,
+  IProviderDisplayWithConnector,
+} from '../helpers'
 import { EventController } from './events';
 
 export class ProviderController {

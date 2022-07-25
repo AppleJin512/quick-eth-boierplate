@@ -2,9 +2,11 @@
 	"name": "connect-web3-svelte",
 	"version": "0.0.0",
 	"type": "module",
+	"main": "package/index.js",
+	"svelte": "package/index.js",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "svelte-kit package",
 		"package": "svelte-kit package",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync",
@@ -30,8 +32,5 @@
 		"tslib": "^2.3.1",
 		"typescript": "^4.7.4",
 		"vite": "^3.0.0"
-	},
-	"dependencies": {
-		"connect-web3-core": "*"
 	}
 }
