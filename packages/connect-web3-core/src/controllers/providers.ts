@@ -25,15 +25,15 @@ import {
 import { EventController } from './events';
 
 export class ProviderController {
-  public cachedProvider: string = '';
-  public shouldCacheProvider: boolean = false;
-  public disableInjectedProvider: boolean = false;
+  public cachedProvider = '';
+  public shouldCacheProvider = false;
+  public disableInjectedProvider = false;
 
   private eventController: EventController = new EventController();
   private injectedProvider: IProviderInfo | null = null;
   private providers: IProviderDisplayWithConnector[] = [];
   private providerOptions: IProviderOptions;
-  private network: string = '';
+  private network = '';
 
   constructor(opts: IProviderControllerOptions) {
     this.cachedProvider = getLocal(CACHED_PROVIDER_KEY) || '';
@@ -141,7 +141,7 @@ export class ProviderController {
     const userOptions: IProviderUserOptions[] = [];
 
     providerList.forEach((id: string) => {
-      let provider = this.getProvider(id);
+      const provider = this.getProvider(id);
       if (typeof provider !== 'undefined') {
         const { id, name, logo, connector } = provider;
         userOptions.push({

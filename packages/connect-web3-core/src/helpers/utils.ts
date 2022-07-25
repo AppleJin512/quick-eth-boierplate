@@ -88,7 +88,7 @@ export function getProviderInfoByCheck(check: string | null): IProviderInfo {
 }
 
 export function isMobile(): boolean {
-  let mobile: boolean = false;
+  let mobile = false;
 
   function hasTouchEvent(): boolean {
     try {
@@ -204,7 +204,7 @@ export function findMatchingRequiredOptions(
 }
 
 export function isLocalStorageAvailable() {
-  let test = 'test';
+  const test = 'test';
   try {
     localStorage.setItem(test, test);
     localStorage.removeItem(test);

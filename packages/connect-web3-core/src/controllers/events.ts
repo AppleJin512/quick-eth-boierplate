@@ -33,7 +33,7 @@ export class EventController {
   }
 
   public trigger(event: string, result?: any): void {
-    let eventCallbacks: IEventCallback[] = this._eventCallbacks.filter(
+    const eventCallbacks: IEventCallback[] = this._eventCallbacks.filter(
       (eventCallback: IEventCallback) => eventCallback.event === event
     );
 

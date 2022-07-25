@@ -2,6 +2,7 @@
   "name": "connect-web3-core",
   "version": "0.0.0",
   "description": "",
+  "type": "module",
   "main": "dist/index.js",
   "author": "",
   "license": "ISC",

@@ -32,3 +32,4 @@ yarn-error.log*
 dist/
 
 **/.rollup.cache/
+packages/connect-web3-svelte/package
