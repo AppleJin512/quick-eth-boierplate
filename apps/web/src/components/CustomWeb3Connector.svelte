@@ -1,17 +1,9 @@
 <script lang="ts">
   import { ConnectWeb3Modal } from 'connect-web3-svelte';
   import ConnectWalletModalContent from './ConnectWalletModalContent.svelte';
+  import { providerOptions } from "../constant/providerOptions.js";
 
   let network = 'rinkeby';
-  let providerOptions = {
-    // walletconnect: {
-    //   package: WalletConnectProvider,
-    //   options: {
-    //     infuraId: conf.INFURA_ID,
-    //     network,
-    //   },
-    // },
-  };
 
   function handleOnConnect(e: any) {
     // const provider = e.detail.provider;
@@ -31,8 +23,7 @@
     on:connect={handleOnConnect}
     on:error={handleConnectError}
     let:hide
-    let:userOptions
-  >
+    let:userOptions>
     <ConnectWalletModalContent on:close={hide} {userOptions} />
   </ConnectWeb3Modal>
 </div>
