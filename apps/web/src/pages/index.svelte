@@ -1,7 +1,5 @@
 <script lang="ts">
   import { connect } from 'connect-web3-svelte';
-
-  import CustomWeb3Connector from '../components/CustomWeb3Connector.svelte';
 </script>
 
 <main class="max-w-2xl mx-auto pt-28">
@@ -16,5 +14,3 @@
     Connect
   </buton>
 </main>
-
-<CustomWeb3Connector />
