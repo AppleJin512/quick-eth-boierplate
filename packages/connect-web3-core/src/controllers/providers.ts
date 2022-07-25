@@ -47,7 +47,7 @@ export class ProviderController {
 
     this.injectedProvider = getInjectedProvider();
 
-    this.providers = Object.keys(list.connectors).map((id: string) => {
+    this.providers = list.orderedConnectorList.map((id: string) => {
       let providerInfo: IProviderInfo;
       if (id === INJECTED_PROVIDER_ID) {
         providerInfo = this.injectedProvider || list.providers.FALLBACK;
