@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { ConnectWeb3Modal } from "connect-web3-svelte";
-  import ConnectWalletModalContent from "./ConnectWalletModalContent.svelte";
+  import { ConnectWeb3Modal } from 'connect-web3-svelte';
+  import ConnectWalletModalContent from './ConnectWalletModalContent.svelte';
 
   let network = 'rinkeby';
   let providerOptions = {
@@ -14,26 +14,26 @@
   };
 
   function handleOnConnect(e: any) {
-    const provider = e.detail.provider
+    // const provider = e.detail.provider;
   }
 
   function handleConnectError() {
     // $isManualConnect = false;
   }
- </script>
+</script>
 
 <div class="custom">
   <ConnectWeb3Modal
-    cacheProvider={true}
-    network={network}
-    disableInjectedProvider={false}
-    providerOptions={providerOptions}
-    on:connect={handleOnConnect}
-    on:error={handleConnectError}
-    let:hide={hide}
-    let:userOptions={userOptions}
+    cacheProvider="{true}"
+    network="{network}"
+    disableInjectedProvider="{false}"
+    providerOptions="{providerOptions}"
+    on:connect="{handleOnConnect}"
+    on:error="{handleConnectError}"
+    let:hide
+    let:userOptions
   >
-    <ConnectWalletModalContent on:close={hide} {userOptions}/>
+    <ConnectWalletModalContent on:close="{hide}" userOptions="{userOptions}" />
   </ConnectWeb3Modal>
 </div>
 

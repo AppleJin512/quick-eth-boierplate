@@ -2,12 +2,7 @@ import * as env from 'detect-browser';
 
 import { CHAIN_DATA_LIST } from '../constants';
 import { providers, injected } from '../providers';
-import {
-  IProviderInfo,
-  IInjectedProvidersMap,
-  ChainData,
-  RequiredOption
-} from './types';
+import { IProviderInfo, IInjectedProvidersMap, ChainData, RequiredOption } from './types';
 
 export function checkInjectedProviders(): IInjectedProvidersMap {
   const result = {

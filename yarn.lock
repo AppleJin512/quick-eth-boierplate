@@ -680,7 +680,7 @@ esbuild-windows-arm64@0.14.50:
   resolved "https://registry.yarnpkg.com/esbuild-windows-arm64/-/esbuild-windows-arm64-0.14.50.tgz#e7ddde6a97194051a5a4ac05f4f5900e922a7ea5"
   integrity sha512-EMS4lQnsIe12ZyAinOINx7eq2mjpDdhGZZWDwPZE/yUTN9cnc2Ze/xUTYIAyaJqrqQda3LnDpADKpvLvol6ENQ==
 
-esbuild@^0.14.27, esbuild@^0.14.47, esbuild@^0.14.48:
+esbuild@^0.14.47, esbuild@^0.14.48:
   version "0.14.50"
   resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.14.50.tgz"
   integrity sha512-SbC3k35Ih2IC6trhbMYW7hYeGdjPKf9atTKwBUHqMCYFZZ9z8zhuvfnZihsnJypl74FjiAKjBRqFkBkAd0rS/w==
@@ -1392,7 +1392,7 @@ picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.2, picomatch@^2.3.1:
   resolved "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
-postcss@^8.4.13, postcss@^8.4.14:
+postcss@^8.4.14:
   version "8.4.14"
   resolved "https://registry.npmjs.org/postcss/-/postcss-8.4.14.tgz"
   integrity sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig==
@@ -1462,7 +1462,7 @@ resolve-from@^5.0.0:
   resolved "https://registry.npmjs.org/resolve-from/-/resolve-from-5.0.0.tgz"
   integrity sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==
 
-resolve@^1.17.0, resolve@^1.19.0, resolve@^1.22.0, resolve@^1.22.1:
+resolve@^1.17.0, resolve@^1.19.0, resolve@^1.22.1:
   version "1.22.1"
   resolved "https://registry.npmjs.org/resolve/-/resolve-1.22.1.tgz"
   integrity sha512-nBpuuYuY5jFsli/JIs1oldw6fOQCBioohqWZg/2hiaOybXOft4lonv85uDOKXdf8rhyK159cxU5cDcK/NKk8zw==
@@ -1497,7 +1497,7 @@ rollup-pluginutils@^2.8.2:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^2.59.0, rollup@^2.75.6, rollup@^2.76.0:
+rollup@^2.75.6, rollup@^2.76.0:
   version "2.77.0"
   resolved "https://registry.npmjs.org/rollup/-/rollup-2.77.0.tgz"
   integrity sha512-vL8xjY4yOQEw79DvyXLijhnhh+R/O9zpF/LEgkCebZFtb6ELeN9H3/2T0r8+mp+fFTBHZ5qGpOpW2ela2zRt3g==
@@ -1683,7 +1683,7 @@ svelte2tsx@^0.5.12:
     dedent-js "^1.0.1"
     pascal-case "^3.1.1"
 
-svelte@^3.44.0, svelte@^3.9.2:
+svelte@^3.44.0:
   version "3.49.0"
   resolved "https://registry.npmjs.org/svelte/-/svelte-3.49.0.tgz"
   integrity sha512-+lmjic1pApJWDfPCpUUTc1m8azDqYCG1JN9YEngrx/hUyIcFJo6VZhj0A1Ai0wqoHcEIuQy+e9tk+4uDgdtsFA==
@@ -1844,7 +1844,7 @@ type-fest@^0.20.2:
   resolved "https://registry.npmjs.org/type-fest/-/type-fest-0.20.2.tgz"
   integrity sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==
 
-typescript@*, typescript@^4.7.2, typescript@^4.7.4:
+typescript@*, typescript@^4.7.4:
   version "4.7.4"
   resolved "https://registry.npmjs.org/typescript/-/typescript-4.7.4.tgz"
   integrity sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==
@@ -1865,18 +1865,6 @@ v8-compile-cache@^2.0.3:
   version "2.3.0"
   resolved "https://registry.npmjs.org/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz"
   integrity sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==
-
-vite@^2.9.13:
-  version "2.9.14"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-2.9.14.tgz#c438324c6594afd1050df3777da981dee988bb1b"
-  integrity sha512-P/UCjSpSMcE54r4mPak55hWAZPlyfS369svib/gpmz8/01L822lMPOJ/RYW6tLCe1RPvMvOsJ17erf55bKp4Hw==
-  dependencies:
-    esbuild "^0.14.27"
-    postcss "^8.4.13"
-    resolve "^1.22.0"
-    rollup "^2.59.0"
-  optionalDependencies:
-    fsevents "~2.3.2"
 
 vite@^3.0.0:
   version "3.0.2"

@@ -10,7 +10,7 @@ const config = {
   output: {
     dir: 'dist',
     format: 'es',
-    sourcemap: true,
+    sourcemap: true
   },
   plugins: [
     nodeResolve(),
@@ -19,7 +19,7 @@ const config = {
         outDir: 'dist'
       }
     }),
-    url(), // solve svg png files
+    url() // solve svg png files
   ]
 };
 

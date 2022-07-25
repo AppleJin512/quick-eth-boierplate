@@ -18,12 +18,12 @@ import {
   getInjectedProvider,
   findMatchingRequiredOptions,
   removeLocalCachedProvider
-} from "../helpers";
+} from '../helpers';
 import type {
   IProviderControllerOptions,
   IProviderOptions,
-  IProviderDisplayWithConnector,
-} from '../helpers'
+  IProviderDisplayWithConnector
+} from '../helpers';
 import { EventController } from './events';
 
 export class ProviderController {
@@ -175,7 +175,7 @@ export class ProviderController {
 
   public clearCachedProvider() {
     this.cachedProvider = '';
-    removeLocalCachedProvider()
+    removeLocalCachedProvider();
   }
 
   public setCachedProvider(id: string) {

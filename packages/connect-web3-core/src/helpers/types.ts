@@ -1,4 +1,4 @@
-export type ICoreOptions = IProviderControllerOptions
+export type ICoreOptions = IProviderControllerOptions;
 
 export interface IProviderControllerOptions {
   disableInjectedProvider: boolean;
