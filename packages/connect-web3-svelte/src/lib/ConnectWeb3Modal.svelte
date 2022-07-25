@@ -1,12 +1,5 @@
-<script context="module" lang="ts">
-  import { opened } from './store';
-
-  export function connect() {
-    opened.set(true);
-  }
-</script>
-
 <script lang="ts">
+  import { opened } from './store';
   import { createEventDispatcher, onMount } from 'svelte';
   import Modal from './Modal.svelte';
   import { ProviderController, CONNECT_EVENT, ERROR_EVENT } from 'connect-web3-core';
@@ -55,5 +48,6 @@
 </script>
 
 <Modal bind:open={$opened}>
+  hello123123123
   <slot {hide} {userOptions} />
 </Modal>
