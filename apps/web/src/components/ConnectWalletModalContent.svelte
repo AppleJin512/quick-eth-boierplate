@@ -15,9 +15,9 @@
     class="cursor-pointer absolute right-4 top-5 phone:right-0 phone:top-3  hover:bg-black-E1 rounded-full w-8 h-8"
   >
     <img
-      src="{'/images/icon-close-modal.svg'}"
+      src={'/images/icon-close-modal.svg'}
       alt="close"
-      on:click="{() => dispatch('close')}"
+      on:click={() => dispatch('close')}
       class="mx-auto"
     />
   </button>
@@ -26,9 +26,9 @@
   {#each userOptions as provider}
     <div
       class="hover:bg-black-F1 py-3 px-4 cursor-pointer w-full text-center flex border justify-between items-center border-black-E0 bg-black-F7 rounded-full max-w-280 mx-auto mb-4"
-      on:click="{() => provider.onClick()}"
+      on:click={() => provider.onClick()}
     >
-      <img src="{provider.logo}" alt="{provider.name}" class="w-6 h-6" />
+      <img src={provider.logo} alt={provider.name} class="w-6 h-6" />
       <div class="mx-auto">
         {provider.name}
       </div>

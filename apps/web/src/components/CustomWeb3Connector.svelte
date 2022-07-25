@@ -24,16 +24,16 @@
 
 <div class="custom">
   <ConnectWeb3Modal
-    cacheProvider="{true}"
-    network="{network}"
-    disableInjectedProvider="{false}"
-    providerOptions="{providerOptions}"
-    on:connect="{handleOnConnect}"
-    on:error="{handleConnectError}"
+    cacheProvider={true}
+    {network}
+    disableInjectedProvider={false}
+    {providerOptions}
+    on:connect={handleOnConnect}
+    on:error={handleConnectError}
     let:hide
     let:userOptions
   >
-    <ConnectWalletModalContent on:close="{hide}" userOptions="{userOptions}" />
+    <ConnectWalletModalContent on:close={hide} {userOptions} />
   </ConnectWeb3Modal>
 </div>
 

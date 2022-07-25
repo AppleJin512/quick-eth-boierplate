@@ -54,6 +54,6 @@
   });
 </script>
 
-<Modal bind:open="{$opened}">
-  <slot hide="{hide}" userOptions="{userOptions}" />
+<Modal bind:open={$opened}>
+  <slot {hide} {userOptions} />
 </Modal>
