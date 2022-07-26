@@ -3,12 +3,13 @@
   import ConnectWalletModalContent from "./ConnectWalletModalContent.svelte";
   import { providerOptions } from "../constant/providerOptions.js";
 
+  export let autoConnect = true;
   let network = 'rinkeby';
 </script>
 
 <div class="custom">
   <ConnectWeb3Modal
-    cacheProvider={true}
+    cacheProvider={autoConnect}
     {network}
     disableInjectedProvider={false}
     {providerOptions}

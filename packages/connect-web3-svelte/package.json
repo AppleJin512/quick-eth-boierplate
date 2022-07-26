@@ -2,8 +2,8 @@
   "name": "connect-web3-svelte",
   "version": "0.0.0",
   "type": "module",
-  "main": "package/index.js",
-  "svelte": "package/index.js",
+  "main": "src/lib/index.ts",
+  "svelte": "src/lib/index.ts",
   "scripts": {
     "dev": "svelte-kit package -w",
     "updateBuildPackageJSON": "node scripts/build.js",

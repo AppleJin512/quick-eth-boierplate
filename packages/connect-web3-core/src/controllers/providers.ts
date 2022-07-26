@@ -227,4 +227,8 @@ export class ProviderController {
       callback
     });
   }
+
+  public allOff() {
+    this.eventController.off();
+  }
 }

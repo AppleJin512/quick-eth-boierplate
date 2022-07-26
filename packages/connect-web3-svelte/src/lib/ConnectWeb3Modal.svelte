@@ -1,6 +1,6 @@
 <script lang="ts">
   import { opened, web3Provider, initWalletRuntime, isManualConnect, userOptions } from "./store";
-  import { createEventDispatcher, onMount } from 'svelte';
+  import { beforeUpdate, createEventDispatcher, onMount } from 'svelte';
   import Modal from './Modal.svelte';
   import { ProviderController, CONNECT_EVENT, ERROR_EVENT } from 'connect-web3-core';
   import type { IProviderOptions } from 'connect-web3-core';
@@ -18,7 +18,8 @@
     $opened = false;
   }
 
-  onMount(async () => {
+  $: {
+    providerController?.allOff();
     providerController = new ProviderController({
       disableInjectedProvider,
       cacheProvider,
@@ -44,7 +45,8 @@
     if (cacheProvider) {
       providerController.connectToCachedProvider();
     }
-  });
+  }
+
 </script>
 
 <Modal bind:open={$opened}>
