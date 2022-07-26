@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { opened, web3Provider, initWalletRuntime, isManualConnect } from './store';
+  import { opened, web3Provider, initWalletRuntime, isManualConnect, userOptions } from "./store";
   import { createEventDispatcher, onMount } from 'svelte';
   import Modal from './Modal.svelte';
   import { ProviderController, CONNECT_EVENT, ERROR_EVENT } from 'connect-web3-core';
-  import type { IProviderUserOptions, IProviderOptions } from 'connect-web3-core';
+  import type { IProviderOptions } from 'connect-web3-core';
 
   export let cacheProvider = false; // optional
   export let network = ''; // optional
@@ -13,7 +13,6 @@
   const dispatch = createEventDispatcher();
 
   let providerController: ProviderController;
-  let userOptions: IProviderUserOptions[] = [];
 
   function hide() {
     $opened = false;
@@ -40,7 +39,7 @@
       hide();
     });
 
-    userOptions = providerController.getUserOptions();
+    userOptions.set(providerController.getUserOptions())
 
     if (cacheProvider) {
       providerController.connectToCachedProvider();
@@ -49,5 +48,5 @@
 </script>
 
 <Modal bind:open={$opened}>
-  <slot {hide} {userOptions} />
+  <slot {hide} userOptions={$userOptions} />
 </Modal>

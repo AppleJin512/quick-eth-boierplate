@@ -1,6 +1,7 @@
 import { writable } from 'svelte/store';
 import { tick } from 'svelte';
-import { removeLocalCachedProvider } from 'connect-web3-core';
+import { removeLocalCachedProvider } from "connect-web3-core";
+import type { IProviderUserOptions } from "connect-web3-core";
 
 // TODO:
 declare let window: any;
@@ -22,6 +23,7 @@ export const isManualConnect = writable(false);
 
 export const autoConnectToWalletFinished = writable(false);
 export const opened = writable(false);
+export const userOptions = writable<IProviderUserOptions[]>([]);
 
 // TODO:
 const defaultProvider = new ethers.providers.InfuraProvider('rinkeby');
