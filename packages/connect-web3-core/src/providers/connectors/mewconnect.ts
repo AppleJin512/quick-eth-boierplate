@@ -24,6 +24,7 @@ const ConnectToMewConnect = (MewConnectProvider: any, opts: IMewConnectConnector
       const mewConnect = new MewConnectProvider.Provider();
       const provider = mewConnect.makeWeb3Provider(chainId, rpc, true);
 
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
       mewConnect.on('disconnected', () => {});
       try {
         const address = await mewConnect.enable();

@@ -8,7 +8,8 @@ module.exports = {
     'svelte3/typescript': () => require('typescript')
   },
   rules: {
-    "@typescript-eslint/no-explicit-any": "off"
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-async-promise-executor": "off",
   },
   parserOptions: {
     sourceType: 'module',
