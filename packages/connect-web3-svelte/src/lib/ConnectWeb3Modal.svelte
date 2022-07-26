@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { opened } from './store';
+  import { opened, w3sProvider, initWalletRuntime, isManualConnect } from './store';
   import { createEventDispatcher, onMount } from 'svelte';
   import Modal from './Modal.svelte';
   import { ProviderController, CONNECT_EVENT, ERROR_EVENT } from 'connect-web3-core';
@@ -29,11 +29,14 @@
 
     providerController.on(CONNECT_EVENT, (provider) => {
       dispatch('connect', { provider });
+      $w3sProvider = provider;
+      initWalletRuntime(provider);
       hide();
     });
 
     providerController.on(ERROR_EVENT, (error) => {
       dispatch('error', { error });
+      $isManualConnect = false;
       hide();
     });
 

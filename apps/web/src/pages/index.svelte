@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { connect } from 'connect-web3-svelte';
-  import { walletAccount, disconnect } from '../store';
+  import { connect, walletAccount, disconnect } from 'connect-web3-svelte';
 
   $: {
     console.log('walletAccount', $walletAccount);
@@ -17,7 +16,7 @@
       class="cursor-pointer rounded-md bg-indigo-600 py-2 px-3 font-semibold leading-5 text-white hover:bg-indigo-500"
       on:click={disconnect}
     >
-      Dicsonnect
+      Disconnect
     </buton>
   {:else if ($walletAccount.status = 'disconnected')}
     <buton

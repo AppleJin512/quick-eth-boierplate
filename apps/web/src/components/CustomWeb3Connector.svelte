@@ -1,21 +1,9 @@
 <script lang="ts">
   import { ConnectWeb3Modal } from "connect-web3-svelte";
-  import { initWalletRuntime, isManualConnect, w3sProvider } from "../store";
   import ConnectWalletModalContent from "./ConnectWalletModalContent.svelte";
   import { providerOptions } from "../constant/providerOptions.js";
 
   let network = 'rinkeby';
-
-  function handleOnConnect(e: any) {
-    const provider = e.detail.provider;
-    $w3sProvider = provider;
-    initWalletRuntime(provider);
-  }
-
-  function handleConnectError() {
-    $isManualConnect = false;
-  }
-
 </script>
 
 <div class="custom">
@@ -24,8 +12,6 @@
     {network}
     disableInjectedProvider={false}
     {providerOptions}
-    on:connect={handleOnConnect}
-    on:error={handleConnectError}
     let:hide
     let:userOptions
   >
