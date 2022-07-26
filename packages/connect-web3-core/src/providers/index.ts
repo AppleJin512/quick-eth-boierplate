@@ -28,5 +28,5 @@ const orderedConnectorList = [
   'bitkeep',
   'starzwallet',
   'web3auth'
-]
+];
 export { connectors, orderedConnectorList, injected, providers };

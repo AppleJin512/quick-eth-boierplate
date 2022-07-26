@@ -1,40 +1,21 @@
-// @ts-ignore
 import WalletConnectLogo from '../logos/walletconnect-circle.svg';
-// @ts-ignore
 import PortisLogo from '../logos/portis.svg';
-// @ts-ignore
 import FortmaticLogo from '../logos/fortmatic.svg';
-// @ts-ignore
 import VenlyLogo from '../logos/venly.svg';
-// @ts-ignore
 import TorusLogo from '../logos/torus.svg';
-// @ts-ignore
 import AuthereumLogo from '../logos/authereum.svg';
-// @ts-ignore
 import BurnerWalletLogo from '../logos/burnerwallet.png';
-// @ts-ignore
 import MEWwallet from '../logos/mewwallet.png';
-// @ts-ignore
 import DcentWalletLogo from '../logos/dcentwallet.png';
-// @ts-ignore
 import BitskiLogo from '../logos/bitski.svg';
-// @ts-ignore
 import OperaLogo from '../logos/opera.svg';
-// @ts-ignore
 import FrameLogo from '../logos/frame.svg';
-// @ts-ignore
 import BinanceChainWalletLogo from '../logos/binancechainwallet.svg';
-// @ts-ignore
 import CoinbaseWalletLogo from '../logos/coinbasewallet.svg';
-// @ts-ignore
 import Web3AuthLogo from '../logos/web3auth.svg';
-// @ts-ignore
 import SequenceLogo from '../logos/sequence.svg';
-// @ts-ignore
 import BitkeepLogo from '../logos/bitkeepwallet.png';
-// @ts-ignore
 import StarzWalletLogo from '../logos/starzwallet.svg';
-
 import { IProviderInfo } from '../../helpers';
 
 export * from '../injected';

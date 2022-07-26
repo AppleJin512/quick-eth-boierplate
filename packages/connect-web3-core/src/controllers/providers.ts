@@ -47,6 +47,7 @@ export class ProviderController {
 
     this.injectedProvider = getInjectedProvider();
 
+    const connectors: { [key: string]: (...args: any) => Promise<any> } = list.connectors;
     this.providers = list.orderedConnectorList.map((id: string) => {
       let providerInfo: IProviderInfo;
       if (id === INJECTED_PROVIDER_ID) {
@@ -66,7 +67,7 @@ export class ProviderController {
       }
       return {
         ...providerInfo,
-        connector: list.connectors[id],
+        connector: connectors[id],
         package: providerInfo.package
       };
     });

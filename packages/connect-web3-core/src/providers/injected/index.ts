@@ -1,64 +1,54 @@
 import { IProviderInfo } from '../../helpers';
 
-// @ts-ignore
 import Web3DefaultLogo from '../logos/web3-default.svg';
-// @ts-ignore
+
 import MetaMaskLogo from '../logos/metamask.svg';
-// @ts-ignore
+
 import SafeLogo from '../logos/safe.svg';
-// @ts-ignore
+
 import NiftyWalletLogo from '../logos/niftyWallet.png';
-// @ts-ignore
+
 import TrustLogo from '../logos/trust.svg';
-// @ts-ignore
+
 import DapperLogo from '../logos/dapper.png';
-// @ts-ignore
+
 import CoinbaseLogo from '../logos/coinbase.svg';
-// @ts-ignore
+
 import CipherLogo from '../logos/cipher.svg';
-// @ts-ignore
+
 import imTokenLogo from '../logos/imtoken.svg';
-// @ts-ignore
+
 import StatusLogo from '../logos/status.svg';
-// @ts-ignore
+
 import TokenaryLogo from '../logos/tokenary.png';
-// @ts-ignore
+
 import OperaLogo from '../logos/opera.svg';
-// @ts-ignore
+
 import FrameLogo from '../logos/frame.svg';
-// @ts-ignore
+
 import LiqualityLogo from '../logos/liquality.png';
-// @ts-ignore
+
 import BoltXLogo from '../logos/boltx.svg';
-// @ts-ignore
+
 import MathWalletLogo from '../logos/mathwallet.png';
-// @ts-ignore
+
 import RWalletLogo from '../logos/rwallet.svg';
-// @ts-ignore
+
 import BitpieLogo from '../logos/bitpie.svg';
-// @ts-ignore
+
 import XDEFILogo from '../logos/xdefi.svg';
-// @ts-ignore
+
 import CeloExtensionWalletLogo from '../logos/celoExtensionWallet.svg';
-// @ts-ignore
+
 import BlockWalletLogo from '../logos/blockwallet.svg';
-// @ts-ignore
 import TallyLogo from '../logos/tally.svg';
-// @ts-ignore
 import PortalLogo from '../logos/portal.svg';
-// @ts-ignore
 import SequenceLogo from '../logos/sequence.svg';
-// @ts-ignore
 import BraveLogo from '../logos/brave.svg';
-// @ts-ignore
 import RabbyLogo from '../logos/rabby.svg';
-// @ts-ignore
 import BitkeepLogo from '../logos/bitkeepwallet.png';
-// @ts-ignore
 import ClvLogo from '../logos/clv.svg';
-// @ts-ignore
 import TokenPocketLogo from '../logos/tokenpocket.svg';
-// @ts-ignore
 import CoreLogo from '../logos/core.svg';
 
 export const FALLBACK: IProviderInfo = {
