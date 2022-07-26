@@ -48,6 +48,5 @@
 </script>
 
 <Modal bind:open={$opened}>
-  hello123123123
   <slot {hide} {userOptions} />
 </Modal>
