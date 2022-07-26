@@ -1,5 +1,10 @@
 <script lang="ts">
   import { connect } from 'connect-web3-svelte';
+  import { walletAccount, disconnect } from '../store';
+
+  $: {
+    console.log('walletAccount', $walletAccount);
+  }
 </script>
 
 <main class="max-w-2xl mx-auto pt-28">
@@ -7,10 +12,21 @@
     Quick-ETH demo
   </h1>
 
-  <buton
-    class="cursor-pointer rounded-md bg-indigo-600 py-2 px-3 font-semibold leading-5 text-white hover:bg-indigo-500"
-    on:click={connect}
-  >
-    Connect
-  </buton>
+  {#if $walletAccount.status === 'connected'}
+    <buton
+      class="cursor-pointer rounded-md bg-indigo-600 py-2 px-3 font-semibold leading-5 text-white hover:bg-indigo-500"
+      on:click={disconnect}
+    >
+      Dicsonnect
+    </buton>
+  {:else if ($walletAccount.status = 'disconnected')}
+    <buton
+      class="cursor-pointer rounded-md bg-indigo-600 py-2 px-3 font-semibold leading-5 text-white hover:bg-indigo-500"
+      on:click={connect}
+    >
+      Connect
+    </buton>
+  {:else}
+    <div>loading</div>
+  {/if}
 </main>

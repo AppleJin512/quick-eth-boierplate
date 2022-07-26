@@ -29,12 +29,10 @@
 
     providerController.on(CONNECT_EVENT, (provider) => {
       dispatch('connect', { provider });
-      console.log('connect');
       hide();
     });
 
     providerController.on(ERROR_EVENT, (error) => {
-      console.log('error');
       dispatch('error', { error });
       hide();
     });
