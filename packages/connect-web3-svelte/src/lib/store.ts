@@ -1,7 +1,6 @@
 import { writable } from 'svelte/store';
 import { tick } from 'svelte';
-import { removeLocalCachedProvider } from 'connect-web3-svelte';
-
+import { removeLocalCachedProvider } from 'connect-web3-core';
 
 // TODO:
 declare let window: any;
@@ -18,7 +17,7 @@ export const walletAccount = writable<Account>({ status: 'disconnected', address
  * 1. used to trigger get wallet information: account, currentChainId...
  * 2. used to switch network
  */
-export const w3sProvider = writable<any>(null);
+export const web3Provider = writable<any>(null);
 export const isManualConnect = writable(false);
 
 export const autoConnectToWalletFinished = writable(false);
@@ -38,9 +37,9 @@ export function connect() {
 
 export function disconnect() {
   cachedProvider = defaultProvider;
-  w3sProvider.set(null);
+  web3Provider.set(null);
   removeLocalCachedProvider();
-  walletAccount.set({ status: 'disconnected', address: '', chainId: '' });
+  walletAccount.set({ status: 'disconnected', address: '', chainId: -1 });
 }
 
 export async function initWalletRuntime(provider: any) {
@@ -68,17 +67,17 @@ export async function initWalletRuntime(provider: any) {
   isManualConnect.set(false);
 }
 
-function registerEthListener(w3sProvider: any) {
-  if (!w3sProvider || !w3sProvider.removeAllListeners || !w3sProvider.on) {
+function registerEthListener(provider: any) {
+  if (!provider || !provider.removeAllListeners || !provider.on) {
     return;
   }
 
-  w3sProvider.removeAllListeners(['connect', 'disconnect', 'accountsChanged', 'chainChanged']);
+  provider.removeAllListeners(['connect', 'disconnect', 'accountsChanged', 'chainChanged']);
 
-  w3sProvider
+  provider
     .on('connect', () => {
       console.info('Event->connect')
-      initWalletRuntime(w3sProvider);
+      initWalletRuntime(provider);
     })
     .on('disconnect', (error: any) => {
       console.info('Event->disconnect')
@@ -95,6 +94,6 @@ function registerEthListener(w3sProvider: any) {
     .on('chainChanged', (chainId: any) => {
       console.info('Event->chainChanged')
       walletAccount.update((prev) => ({ ...prev, status: 'connected', chainId: Number(chainId) }));
-      initWalletRuntime(w3sProvider);
+      initWalletRuntime(provider);
     });
 }

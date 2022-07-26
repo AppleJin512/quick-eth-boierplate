@@ -1,8 +1,12 @@
 <script lang="ts">
-  import { connect, walletAccount, disconnect } from 'connect-web3-svelte';
+  import { connect, walletAccount, disconnect, web3Provider } from 'connect-web3-svelte';
 
-  $: {
-    console.log('walletAccount', $walletAccount);
+  $: if ($web3Provider) {
+    $web3Provider
+      .on('connect', () => console.log('=============connnect==========='))
+      .on('disconnect', () => console.log('=============disconnnect==========='))
+      .on('accountsChanged', () => console.log('===========accountsChanged========='))
+      .on('chainChanged', () => console.log('=============chainChanged==========='));
   }
 </script>
 
@@ -28,4 +32,14 @@
   {:else}
     <div>loading</div>
   {/if}
+
+  <div
+    class="mt-10 p-4 not-prose relative bg-slate-100 rounded-xl overflow-hidden dark:bg-slate-800/25"
+  >
+    <ul class="">
+      <li>status: {$walletAccount.status}</li>
+      <li>address: {$walletAccount.address}</li>
+      <li>chainId: {$walletAccount.chainId}</li>
+    </ul>
+  </div>
 </main>
