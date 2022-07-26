@@ -168,10 +168,8 @@ export class ProviderController {
     );
   }
 
-  public getProviderOption(id: string, key: string) {
-    return this.providerOptions && this.providerOptions[id] && this.providerOptions[id][key]
-      ? this.providerOptions[id][key]
-      : {};
+  public getProviderOption(id: string, key: 'package' | 'options'): any {
+    return (this.providerOptions?.[id]?.[key] as any)|| {}
   }
 
   public clearCachedProvider() {

@@ -5,7 +5,7 @@ import { providers, injected } from '../providers';
 import { IProviderInfo, IInjectedProvidersMap, ChainData, RequiredOption } from './types';
 
 export function checkInjectedProviders(): IInjectedProvidersMap {
-  const result = {
+  const result: any = {
     injectedAvailable: !!window.ethereum || !!window.web3
   };
   if (result.injectedAvailable) {
@@ -42,7 +42,7 @@ export function verifyInjectedProvider(check: string): boolean {
 export function getInjectedProvider(): IProviderInfo | null {
   let result = null;
 
-  const injectedProviders = checkInjectedProviders();
+  const injectedProviders: Partial<IInjectedProvidersMap> = checkInjectedProviders();
 
   if (injectedProviders.injectedAvailable) {
     delete injectedProviders.injectedAvailable;
@@ -154,7 +154,7 @@ export function filterMatches<T>(
   return result;
 }
 
-export function filterProviders(param: string, value: string | null): IProviderInfo {
+export function filterProviders(param: 'id' | 'name' | 'check', value: string | null): IProviderInfo {
   if (!value) return providers.FALLBACK;
   const match = filterMatches<IProviderInfo>(
     Object.values(providers),
